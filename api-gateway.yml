@@ -3,13 +3,13 @@ server:
 
 spring:
   application:
-    name: api-gatway
+    name: API-GATEWAY
 
   cloud:
     gateway:
       discovery:
         locator:
-          enabled: true  # Enables dynamic routes for Eureka
+          enabled: true
           lower-case-service-id: true
 
       routes:
@@ -30,7 +30,7 @@ spring:
 
 eureka:
   client:
-    fetch-registry: true
     register-with-eureka: true
+    fetch-registry: true
     service-url:
       defaultZone: http://localhost:8761/eureka/
